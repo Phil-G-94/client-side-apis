@@ -67,11 +67,18 @@ Useful Rsrc = [Live DOM Viewer] (https://software.hixie.ch/utilities/js/live-dom
 
 - DOM nodes; nodes can represent elements | attributes | text | etc. within HTML structure
 [Node.nodeType](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType). 
- ..* Nodes are also referred to by their position relative to other nodes:
+The Node interface represents all nodes in a DOM. 
+
+ * Nodes are also referred to by their position relative to other nodes:
   1. Root node
   2. Child node
   3. Descendant node: node *anywhere* inside another node
   4. Parent node: node which has another node inside it
   5. Sibling nodes: nodes that sit on the same lvl in the DOM tree
+
+- Active Learning: Basic DOM Manipulation
+  1. document.querySelector() | document.querySelectorAll() // older methods for grabbing element references. 
+  2. document.createElement() | .appendChild() | .createTextNode()
+  3. Moving/removing elements
   
   
