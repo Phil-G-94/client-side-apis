@@ -47,10 +47,31 @@ https://developer.mozilla.org/en-US/docs/Web/API
 
 ### They are object-based
 
+- Your code interacts with APIs using one/more JS objects. Objects serve as containers for the data the API uses (contained in obj properties), and the functionality the API makes available (contained in obj methods).
+ 1. https://codepen.io/_Recurs1ion/pen/MWBJoLZ?editors=1100 [Web Audio API example]
 
+### They have recognisable entry points. 
+- The entry point is usually an object, stored in a variable, that needs to be used to do things with the API.
+ 1. For the Web Audio API, the entry point is the AudioContext object.
+ 2. For the DOM API, it is the Document object. 
 
+### They use events to handle changes in state. 
 
+### They have additional security mechanism where appropriate.
 
+ - Subject to same-origin policy | other similar security considerations employed in the JS language and other web technologies. [Same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy).
+ 
+## Manipulating documents (DOM API)
 
+Useful Rsrc = [Live DOM Viewer] (https://software.hixie.ch/utilities/js/live-dom-viewer/)
 
-
+- DOM nodes; nodes can represent elements | attributes | text | etc. within HTML structure
+[Node.nodeType](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType). 
+ ..* Nodes are also referred to by their position relative to other nodes:
+  1. Root node
+  2. Child node
+  3. Descendant node: node *anywhere* inside another node
+  4. Parent node: node which has another node inside it
+  5. Sibling nodes: nodes that sit on the same lvl in the DOM tree
+  
+  
