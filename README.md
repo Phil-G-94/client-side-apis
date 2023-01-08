@@ -80,5 +80,16 @@ The Node interface represents all nodes in a DOM.
   1. document.querySelector() | document.querySelectorAll() // older methods for grabbing element references. 
   2. document.createElement() | .appendChild() | .createTextNode()
   3. Moving/removing elements
+   - .appendChild() | .cloneNode() | 
+   - .removeChild() 
+   - .remove() /* not supported in older browsers */ use Node.parentNode.removeChild(childNode)
+  4. Manipulating style and other properties
+   - via HTMLElement.style
+   - leveraging CSS properties directly, eitherly in <style></style> or its own stylesheet. 
+   - Element.setAttribute() || takes two args, the attribute you want to set on element and the value you want to set it to. 
+   - Note: *mixing CSS and JS is considered bad practice. Avoid inline styling. 
+   [Codepen](https://codepen.io/_Recurs1ion/pen/WNKREJW?editors=0010)
+   
+- Active Learning: Dynamic Shopping List  
   
   
