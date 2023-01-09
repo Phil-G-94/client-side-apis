@@ -77,12 +77,15 @@ The Node interface represents all nodes in a DOM.
   5. Sibling nodes: nodes that sit on the same lvl in the DOM tree
 
 - Active Learning: Basic DOM Manipulation
-  1. document.querySelector() | document.querySelectorAll() // older methods for grabbing element references. 
-  2. document.createElement() | .appendChild() | .createTextNode()
-  3. Moving/removing elements
+  1. Selecting/appending/creating elements
+     document.querySelector() | document.querySelectorAll() // older methods for grabbing element references. 
+     document.createElement() | .appendChild() | .createTextNode()
+
+  3. Moving/removing/adding elements
    - .appendChild() | .cloneNode() | 
    - .removeChild() 
    - .remove() /* not supported in older browsers */ use Node.parentNode.removeChild(childNode)
+
   4. Manipulating style and other properties
    - via HTMLElement.style
    - leveraging CSS properties directly, eitherly in <style></style> or its own stylesheet. 
