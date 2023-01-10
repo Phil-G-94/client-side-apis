@@ -76,7 +76,7 @@ The Node interface represents all nodes in a DOM.
   4. Parent node: node which has another node inside it
   5. Sibling nodes: nodes that sit on the same lvl in the DOM tree
 
-- Active Learning: Basic DOM Manipulation
+## Active Learning: Basic DOM Manipulation
   1. Selecting/appending/creating elements
      document.querySelector() | document.querySelectorAll() // older methods for grabbing element references. 
      document.createElement() | .appendChild() | .createTextNode()
@@ -93,6 +93,7 @@ The Node interface represents all nodes in a DOM.
    - Note: *mixing CSS and JS is considered bad practice. Avoid inline styling. 
    [Codepen](https://codepen.io/_Recurs1ion/pen/WNKREJW?editors=0010)
    
-- Active Learning: Dynamic Shopping List  
-  
+## Active Learning: Dynamic Shopping List  
+  - [Pen](https://codepen.io/_Recurs1ion/pen/QWBdmgO?editors=1010)
+  - Simple dynamic shopping list allow user to input, delete list items. Built manipulating elements via the DOM API. 
   
