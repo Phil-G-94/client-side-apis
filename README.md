@@ -96,4 +96,9 @@ The Node interface represents all nodes in a DOM.
 ## Active Learning: Dynamic Shopping List  
   - [Pen](https://codepen.io/_Recurs1ion/pen/QWBdmgO?editors=1010)
   - Simple dynamic shopping list allow user to input, delete list items. Built manipulating elements via the DOM API. 
+
+## Fetching data from the server || using the fetch() API
+  - The main API here is the Fetch API. This enables JavaScript running in a page to make an HTTP request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using DOM manipulation APIs. The data requested is often JSON, which is a good format for transferring structured data, but can also be HTML or just text.
+
+
   
