@@ -98,7 +98,13 @@ The Node interface represents all nodes in a DOM.
   - Simple dynamic shopping list allow user to input, delete list items. Built manipulating elements via the DOM API. 
 
 ## Fetching data from the server || using the fetch() API
+  - Useful (additional) resources:
+    1. [In-depth guide to using fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+    2. [Reference page for JS promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+    3. [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+    4. [Server-side programming guide](https://developer.mozilla.org/en-US/docs/Learn/Server-side)
+
   - The main API here is the Fetch API. This enables JavaScript running in a page to make an HTTP request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using DOM manipulation APIs. The data requested is often JSON, which is a good format for transferring structured data, but can also be HTML or just text.
-
-
+  
+  - Code to succesfully execute fetch requests via fetch() API / XMLHttpRequest
   
