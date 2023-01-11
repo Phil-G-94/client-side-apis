@@ -106,5 +106,5 @@ The Node interface represents all nodes in a DOM.
 
   - The main API here is the Fetch API. This enables JavaScript running in a page to make an HTTP request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using DOM manipulation APIs. The data requested is often JSON, which is a good format for transferring structured data, but can also be HTML or just text.
   
-  - Code to succesfully execute fetch requests via fetch() API / XMLHttpRequest
+  - Code to succesfully execute fetch requests via fetch() API / XMLHttpRequest in fetch-start.html
   
