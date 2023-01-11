@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch starting point</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <h1>Fetch starting point</h1>
+
+  <form>
+    <label for="verse-choose">Choose a verse</label>
+    <select id="verse-choose" name="verse-choose">
+      <option>Verse 1</option>
+      <option>Verse 2</option>
+      <option>Verse 3</option>
+      <option>Verse 4</option>
+    </select>
+  </form>
+
+  <h2>The Conqueror Worm, <em>Edgar Allen Poe, 1843</em></h2>
+
+  <pre>
+
+  </pre>
+
+  <script>
+    //grab a ref to select element and store in var
+    const verseChoose = document.querySelector("select");
+
+    //grab a ref to select element and store in var
+    const poemDisplay = document.querySelector("pre");
+
+    verseChoose.addEventListener("change", () => {
+      const verse = verseChoose.value;
+      updateDisplay(verse);
+    });
+
+    function updateDisplay(verse) {
+      verse = verse.replace(" ", "").toLowerCase();
+      const url = `${verse}.txt`;
+
+      fetch(url)
+        // fetch() returns a promise, when this is received from server
+        // the promise's `then()` handler is called with the response.
+        .then((response) => {
+          // Our handler throws an error if the request did not succeed.
+          if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+          }
+          // Otherwise (if response succeeded), our handler fetches the response as text by calling response.text()
+          // and immediately returns the promise returned by `response.text()`
+          return response.text();
+        })
+        // when response.text() has succeeded, the `then()` handler is called with
+        // the text, and we copy it into the `poemDisplay` box.
+        .then((text) => poemDisplay.textContent = text)
+
+        // Catch any errors that might happen, and display a message in the `poemDisplay` box.
+        .catch((error) => poemDisplay.textContent = `Could not fetch verse: ${error}`);
+    };
+
+
+
+    updateDisplay("Verse 1");
+    verseChoose.value = "Verse 1";
+
+    /*
+    using XMLHttpRequest(); deprecated, used to be the first API widely used to implement AJAX
+
+    const request = new XMLHttpRequest();
+
+    try {
+      request.open("GET", "products.json");
+
+      request.responseType = "json";
+
+      request.addEventListener("load", () => initialize(request.response));
+
+      request.addEventListener("error", () => console.error("XHR error"));
+      
+      request.send();
+
+    } catch (error) {
+      console.error(`XHR error ${request.status}`);
+    }
+
+
+    There are five stages to this:
+
+    Create a new XMLHttpRequest object.
+    Call its open() method to initialize it.
+    Add an event listener to its load event, which fires when the response has completed successfully. In the listener we call initialize() with the data.
+    Add an event listener to its error event, which fires when the request encounters an error
+    Send the request.
+    We also have to wrap the whole thing in the try...catch block, to handle any errors thrown by open() or send().
+
+
+    */
+  </script>
+
+</body>
+
+</html>
