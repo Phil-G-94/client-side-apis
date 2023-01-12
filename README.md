@@ -112,6 +112,17 @@ The Node interface represents all nodes in a DOM.
 ### The can store example
   - [Source code](https://github.com/mdn/learning-area/tree/main/javascript/apis/fetching-data/can-store)
   - Binary Large Object; large file-like objects, video files/images. We use the [.blob() method](https://developer.mozilla.org/en-US/docs/Web/API/Response/blob) of the Response object || returns a promise that resolves with a [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob). 
+
+## Third-party APIs
+### They need to be connected to
+- 3rd party APIs are located on 3rd party servers; they need to be connected to / made available on the page before you can use them. 
+- You connect by linking a JS library available on the server. We put this in the script element. 
+- You can then start using objects from that API library. 
+### They require API keys
+- You need to register for a developer key before you can use the API. 
+- The key needs to be ...
+
+
   
   
   
