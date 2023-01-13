@@ -120,7 +120,21 @@ The Node interface represents all nodes in a DOM.
 - You can then start using objects from that API library. 
 ### They require API keys
 - You need to register for a developer key before you can use the API. 
-- The key needs to be ...
+- The key needs to be (assigned?)
+
+#### Using the MapQuest API 
+ - We connect API key by assigning it to L.mapquest.key 
+ - We instantiate a map with:
+```
+const map = L.mapquest.map('map', {
+  center: [34.6786, 33.0413],
+  // change tileLayer to 'dark' from default 'map'/'hybrid'
+  layers: L.mapquest.tileLayer('dark'),
+  zoom: 12
+});
+```
+
+- Example files in map-api directory. 
 
 
   
